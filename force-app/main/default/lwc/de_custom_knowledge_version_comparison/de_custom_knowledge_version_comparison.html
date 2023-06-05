@@ -1,0 +1,41 @@
+<template>
+
+<div class="demo-only demo-only--sizing slds-grid slds-wrap">
+
+  <div class="slds-size_1-of-2">
+    <div class="">
+        <div style="font-size:0.75rem; color:rgb(68, 68, 68);">
+            Current Article
+        </div>
+        <div style="padding-top: 10px; font-size:16px; color:rgb(68, 68, 68);">
+            Current Version : <span> Version {currentKnowArtVer} </span>
+        </div>
+        <div style="padding-top: 24px; padding-right: 20px;">
+            
+            <lightning-formatted-text value={currentKnowArtTitle}></lightning-formatted-text>
+
+            <lightning-formatted-rich-text value={currentKnowArtDetail}></lightning-formatted-rich-text>
+
+        </div>
+    </div>
+  </div>
+
+  <div class="slds-size_1-of-2">
+    <div class="">
+        
+        <lightning-combobox name="progress" label="Other Version" placeholder="Select Version ..." options={articleVersion} onchange={handleChange}></lightning-combobox>
+        <br/>
+        <div style="padding-right: 20px;">
+            
+            <lightning-formatted-text value={selectedKnowArtTitle}></lightning-formatted-text>
+
+            <lightning-formatted-rich-text value={selectedKnowArtDetail}></lightning-formatted-rich-text>
+
+        </div>
+    </div>
+  </div>
+
+</div>
+
+
+</template>
